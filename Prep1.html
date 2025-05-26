@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <form>
+        <label for="Firstname" >Firstname: </label></br>
+        <input type="text" id="Firstname" name="FirstName">
+        <input type="submit">
+</br>
+
+<label for="Lname">Lastname:</label></br>
+<input type="text" id="Lname" name="Lname">
+</br>
+<input type="radio" id="HTML" name="favLanguage">
+<label for="HTML" >HTML</label>
+</br>
+<input type="checkbox" id="vehicle1" name="Trucky" >
+<label for="vehicle1" >Trucky</label>
+
+    </form> -->
+
+</head>
+
+
+<body>
+    <h1>To Do List</h1>
+    <input type="text" id="taskinput" placeholder="Enter a Due Task">
+    <button onclick="addtask()">Add</button>
+    <ul id="tasklist"></ul>
+
+    <script>
+function addtask()
+{
+    let taskinput= document.getElementById("taskinput");
+    let taskText= taskinput.value.trim();
+
+    if (taskText =="")
+{       return;    }
+
+let li= document.createElement("li");
+li.textContent= taskText;
+let removeBtn= document.createElement("button");
+    removeBtn.textContent="X";
+
+    removeBtn.onclick= function()
+    {
+          li.remove();
+    };
+
+li.appendChild(removeBtn);
+
+document.getElementById("tasklist")
+appendChild(li);
+
+taskinput.value="";
+}
+        // let a=10;
+        // let b=15;
+        // alert(a);
+//         let product= a*b;
+//         let remainder= a%b;
+
+//         let num1= 10;
+//         let num2= 20;
+//         let isEqual= num1==num2;
+//         let isNotEqual= num1!=num2;
+//         let isGreater= num1>num2;
+//         let isGreaterOrEqual= num1>=num2;
+
+//         //logical operators:
+//         let count=5;
+//         count += 10;
+//         count *= 5;
+
+//        // order of precedence:
+//     /*  paranthesis ()
+//         exponentiation ^
+//         multiplication *
+//         division /
+//         addition +
+//         subtraction -
+//     */
+
+//     let temperature=5;
+//     if (temperature> 30)
+//     {
+//        document.write("its hot outside!");
+//     }
+//     else{
+//        document.write("its cold outside!")
+//     }
+
+
+//     let score=56;
+//     if(score<40)
+//     {
+//        document.write("you get a F grade");
+//     }else if(score>40 && score<50 )
+//     {
+//        document.write("you get an E");
+//     }else if(score>50 && score< 60)
+//     {
+//        document.write("you get a D");
+//     }else if(score<70 && score>60)
+//     {
+//        document.write(" you get a C");
+//     }else{
+//        document.write("you get above average");
+//     }
+
+
+
+//     //loops:
+//     //while loop: executes the code as long 
+//     //as the condition remains true
+//     let i=0;
+//     while(i<5)
+//     {
+//        document.write(i);
+//         i++;
+//     }
+
+//     //for loop: the number of iterations are known;
+//     //takes 3 arguments: (let i=0; i<5; i++)
+//     for(i=0; i>0 ; i++)
+//     {
+
+//     }
+//     //do while loop: this loop atleast runs once , 
+//     // then continues if the condition remains true
+// let i=0;
+// do{
+//    document.write("Iterations:", i);
+//     i++;
+// }while(i<5)
+
+// //function:
+// function add(a , b)
+// {
+//     return a+b;
+// }
+//arrays:
+// let fruits= ['apple','banana', 'cherry', 'grapes'];
+
+// fruits.push('orange');
+// console.log(fruits);
+//  fruits.pop();
+// document.write(fruits); //receives the alst element from the array
+//  delete fruits[0];//removes apple from index 0;
+// document.write(fruits);
+//  fruits.shift();
+// document.write(fruits);
+// document.write(fruits[1]);
+
+// let arrowfunction= (a,b) =>
+// {
+
+// }
+
+    </script>
+</body>
+</html>
